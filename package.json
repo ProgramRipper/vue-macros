@@ -63,6 +63,8 @@
     "tsx": "^4.16.2",
     "typescript": "~5.5.3",
     "unocss": "^0.61.5",
+    "unplugin": "catalog:",
+    "unplugin-isolated-decl": "0.4.1",
     "unplugin-macros": "^0.13.1",
     "unplugin-raw": "^0.2.2",
     "vite": "catalog:",
