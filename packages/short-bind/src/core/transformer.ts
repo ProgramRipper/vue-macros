@@ -1,9 +1,9 @@
 import {
+  ConstantTypes,
   createSimpleExpression,
+  NodeTypes,
   processExpression,
-  type ConstantTypes,
   type NodeTransform,
-  type NodeTypes,
 } from '@vue/compiler-core'
 
 const reg = /^(::?|\$|\*)(?=[A-Z_a-z])/
@@ -15,14 +15,14 @@ export interface Options {
 // eslint-disable-next-line unused-imports/no-unused-vars -- not be used by now
 export function transformShortBind(_options: Options = {}): NodeTransform {
   return (node, context) => {
-    if (node.type !== (1 satisfies NodeTypes.ELEMENT)) return
+    if (node.type !== NodeTypes.ELEMENT) return
 
     for (const prop of node.props) {
       if (
         reg.test(prop.loc.source) &&
-        (prop.type === (6 satisfies NodeTypes.ATTRIBUTE)
+        (prop.type === NodeTypes.ATTRIBUTE
           ? !prop.value
-          : prop.type === (7 satisfies NodeTypes.DIRECTIVE)
+          : prop.type === NodeTypes.DIRECTIVE
             ? !prop.exp
             : false)
       ) {
@@ -30,9 +30,9 @@ export function transformShortBind(_options: Options = {}): NodeTransform {
           .replace(reg, '')
           .replaceAll(/-([A-Za-z])/g, (_, name) => name.toUpperCase())
 
-        if (prop.type === (6 satisfies NodeTypes.ATTRIBUTE)) {
+        if (prop.type === NodeTypes.ATTRIBUTE) {
           prop.value = {
-            type: 2 satisfies NodeTypes.TEXT,
+            type: NodeTypes.TEXT,
             content: valueName,
             loc: {
               start: { ...prop.loc.start },
@@ -41,7 +41,7 @@ export function transformShortBind(_options: Options = {}): NodeTransform {
             },
           }
           prop.loc.start.offset = Number.POSITIVE_INFINITY
-        } else if (prop.type === (7 satisfies NodeTypes.DIRECTIVE)) {
+        } else if (prop.type === NodeTypes.DIRECTIVE) {
           const simpleExpression = createSimpleExpression(
             valueName,
             false,
@@ -60,10 +60,10 @@ export function transformShortBind(_options: Options = {}): NodeTransform {
               },
               source: valueName,
             },
-            0 satisfies ConstantTypes.NOT_CONSTANT,
+            ConstantTypes.NOT_CONSTANT,
           )
 
-          if (prop.arg?.type === (4 satisfies NodeTypes.SIMPLE_EXPRESSION))
+          if (prop.arg?.type === NodeTypes.SIMPLE_EXPRESSION)
             prop.arg.loc.start.offset = Number.POSITIVE_INFINITY
 
           prop.exp = processExpression(simpleExpression, context)
