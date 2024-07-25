@@ -1,5 +1,12 @@
 # @vue-macros/script-lang
 
+## 0.1.1
+### Patch Changes
+
+
+
+- [`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd) Thanks [@sxzz](https://github.com/sxzz)! - Add `rspack` & `rolldown` export entry
+
 ## 0.1.0
 ### Minor Changes
 

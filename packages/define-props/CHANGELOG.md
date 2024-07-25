@@ -1,5 +1,15 @@
 # @vue-macros/define-props
 
+## 3.0.1
+### Patch Changes
+
+
+
+- [`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd) Thanks [@sxzz](https://github.com/sxzz)! - Add `rspack` & `rolldown` export entry
+
+- Updated dependencies [[`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd)]:
+  - @vue-macros/reactivity-transform@1.0.1
+
 ## 3.0.0
 ### Patch Changes
 

@@ -1,5 +1,12 @@
 # @vue-macros/export-render
 
+## 0.2.7
+### Patch Changes
+
+
+
+- [`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd) Thanks [@sxzz](https://github.com/sxzz)! - Add `rspack` & `rolldown` export entry
+
 ## 0.2.6
 ### Patch Changes
 

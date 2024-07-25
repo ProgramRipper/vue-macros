@@ -1,5 +1,39 @@
 # unplugin-vue-macros
 
+## 2.10.1
+### Patch Changes
+
+
+
+- [`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd) Thanks [@sxzz](https://github.com/sxzz)! - Add `rspack` & `rolldown` export entry
+
+- Updated dependencies [[`23be90e`](https://github.com/vue-macros/vue-macros/commit/23be90ed1bc3ff1b144cdc051627ca13532a56dd)]:
+  - @vue-macros/reactivity-transform@1.0.1
+  - @vue-macros/define-props-refs@1.2.7
+  - @vue-macros/setup-component@0.17.7
+  - unplugin-vue-define-options@1.4.7
+  - @vue-macros/named-template@0.4.7
+  - @vue-macros/better-define@1.7.9
+  - @vue-macros/define-models@1.2.7
+  - @vue-macros/define-render@1.5.7
+  - @vue-macros/export-expose@0.1.7
+  - @vue-macros/export-render@0.2.7
+  - @vue-macros/jsx-directive@0.8.17
+  - @vue-macros/boolean-prop@0.4.2
+  - @vue-macros/define-props@3.0.1
+  - @vue-macros/define-slots@1.1.7
+  - @vue-macros/export-props@0.4.7
+  - @vue-macros/hoist-static@1.5.7
+  - @vue-macros/short-vmodel@1.4.7
+  - @vue-macros/define-emit@0.2.9
+  - @vue-macros/define-prop@0.3.9
+  - @vue-macros/script-lang@0.1.1
+  - @vue-macros/setup-block@0.3.7
+  - @vue-macros/short-emits@1.5.7
+  - @vue-macros/chain-call@0.3.2
+  - @vue-macros/short-bind@1.0.1
+  - @vue-macros/setup-sfc@0.17.7
+
 ## 2.10.0
 ### Minor Changes
 
