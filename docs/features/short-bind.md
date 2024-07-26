@@ -24,7 +24,7 @@ const value = 'foo'
 
 <template>
   <input :value />
-  <!-- => <input :foo="value" /> -->
+  <!-- => <input :value="value" /> -->
 </template>
 ```
 
@@ -33,11 +33,11 @@ const value = 'foo'
 ```vue
 <template>
   <Comp ::value />
-  <!-- => <Comp ::foo="foo" /> => <Comp v-model:foo="foo" /> -->
-  <Comp $foo />
-  <!-- => <Comp $foo="foo" /> => <Comp v-model:foo="foo" /> -->
-  <Comp *foo />
-  <!-- => <Comp *foo="foo" /> => <Comp v-model:foo="foo" /> -->
+  <!-- => <Comp ::value="value" /> => <Comp v-model:value="value" /> -->
+  <Comp $value />
+  <!-- => <Comp $value="value" /> => <Comp v-model:value="value" /> -->
+  <Comp *value />
+  <!-- => <Comp *value="value" /> => <Comp v-model:value="value" /> -->
 </template>
 ```
 
